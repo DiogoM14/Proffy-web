@@ -19,26 +19,26 @@ const Landing: React.FC = () => {
   return (
     <Container>
       <PageLandingContent className="container">
-        <LogoContainer>
+        <LogoContainer className="logo-container">
           <img src={logoImg} alt="Proffy"/>
-          <h2>A tua plataforma de estudos online</h2>
+          <h2 className="slogan">A tua plataforma de estudos online</h2>
         </LogoContainer>
 
         <img src={landingImg} alt="Plataforma de estudos" className="hero-img"/>
 
-        <ButtonsContainer>
+        <ButtonsContainer className="btns">
           <a href="" className="study">
             <img src={studyIcon} alt="Estudar"/>
             Estudar
           </a>
 
           <a href="" className="give-classes">
-            <img src={giveClassesIcon} alt="Estudar"/>
-            Estudar
+            <img src={giveClassesIcon} alt="Dar aulas"/>
+            Dar aulas
           </a>
         </ButtonsContainer>
 
-        <TotalConnections>
+        <TotalConnections className="total-connections">
           Total de 200 conexões já realizadas
           <img src={purpleHeartIcon} alt="Coração roxo"/>
         </TotalConnections>
