@@ -1,9 +1,10 @@
 import React from 'react';
 
-import { Container, Form, Main, TeacherItem, Header, Footer } from './styles';
+import TeacherItem from '../../components/TeacherItem';
 import PageHeader from '../../components/PageHeader';
 
-import whatsappIcon from '../../assets/images/icons/whatsapp.svg';
+import { Container, Form, Main } from './styles';
+
 
 const TeacherList: React.FC = () => {
   return (
@@ -28,32 +29,9 @@ const TeacherList: React.FC = () => {
         </PageHeader>
 
         <Main>
-          <TeacherItem className="teacher-item">
-            <Header>
-              <img src="https://avatars3.githubusercontent.com/u/53921606?s=460&u=f37a358780cf3ad971fa0151eed1e1977a14f19e&v=4" alt="Diogo Martins"/>
-              <div>
-                <strong>Diogo Martins</strong>
-                <span>Química</span>
-              </div>
-            </Header>
-
-            <p>
-              Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-              <br/>
-              Voluptatibus velit vel aut eveniet dicta nulla vitae deserunt saepe ab natus enim eos asperiores recusandae, itaque, veniam unde molestiae quidem debitis!
-            </p>
-
-            <Footer>
-              <p>
-                Preço/hora
-                <strong>10$</strong>
-              </p>
-              <button type="button">
-                <img src={whatsappIcon} alt="Whatsapp"/>
-                Entrar em Contacto
-              </button>
-            </Footer>
-          </TeacherItem>
+          <TeacherItem />
+          <TeacherItem />
+          <TeacherItem />
         </Main>
     </Container>
   );

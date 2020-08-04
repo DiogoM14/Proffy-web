@@ -46,6 +46,7 @@ export default createGlobalStyle`
 
   body, input, button, textarea {
     font: 500 1.6rem Poppins;
+    color: var(--color-text-base);
   }
 
   .container {
