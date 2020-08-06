@@ -1,54 +1,85 @@
 import styled from 'styled-components';
 
-export const Container = styled.div`
+export const Container = styled.div``;
+
+export const PageTeacherForm = styled.div`
   width: 100vw;
   height: 100vh;
 
+  header .header-content {
+    margin-bottom: 6.4rem;
+  }
 `;
 
-export const PageTeacherForm = styled.div`
-  max-width: 700px;
+export const Main = styled.main`
+  background: var(--color-box-base);
+  width: 100%;
+  max-width: 74rem;
+  border-radius: 0.8rem;
+  margin: -3.2rem auto 3.2rem;
+  padding-top: 6.4rem;
+  overflow: hidden;
 
-  header {
-    display: flex;
-    flex-direction: column;
-    background: var(--color-primary);
-  }
+  fieldset {
+    border: 0;
+    padding: 0 2.4rem;
 
-  header div {
-    width: 90%;
-    margin: 0 auto;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    color: var(--color-text-in-primary);
-    padding: 1.6rem 0;
-  }
+    & + fieldset {
+      margin-top: 6.4rem;
+    }
 
-  header div a {
-    height: 3.2rem;
-    transition: opacity .2s;
-
-    &:hover {
-      opacity: 0.6;
+    & legend {
+      font: 700 2.4rem Archivo;
+      color: var(--color-text-title);
+      margin-bottom: 2.4rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      width: 100%;
+      padding-bottom: 1.6rem;
+      border-bottom: 1px solid var(--color-line-in-white);
     }
   }
 
-  header div > img {
-    height: 1.6rem;
-  }
+  footer {
+    padding: 4rem 2.4rem;
+    background: var(--color-box-footer);
+    border-top: 1px solid var(--color-line-in-white);
+    margin-top: 6.4rem;
 
-  header .header-content {
-    width: 90%;
-    margin: 0 auto;
-    position: relative;
-    margin: 3.2rem auto;
-  }
+    & p {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.4rem;
+      line-height: 2.4rem;
+      color: var(--color-text-complement);
+    }
 
-  header .header-content strong {
-    font: 700 3.6rem Archivo;
-    line-height: 4.2rem;
-    color: var(--color-title-in-primary);
+    & p img {
+      margin-right: 2rem;
+    }
+
+    & button {
+      width: 100%;
+      height: 5.6rem;
+      background: var(--color-secondary);
+      color: var(--color-button-text);
+      border: 0;
+      border-radius: 0.8rem;
+      cursor: pointer;
+      font: 700 1.6rem Archivo;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-decoration: none;
+      transition: background-color .2s;
+      margin-top: 3.2rem;
+
+      &:hover {
+        background: var(--color-secondary-dark);
+      }
+    }
   }
 
 `;
