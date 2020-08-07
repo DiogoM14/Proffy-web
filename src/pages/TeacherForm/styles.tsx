@@ -14,6 +14,12 @@ export const PageTeacherForm = styled.div`
       padding: 0 6.4rem;
     }
 
+    main .schedule-item {
+      display: grid;
+      grid-template-columns: 2fr 1fr 1fr;
+      column-gap: 1.6rem;
+    }
+
     main footer {
       padding: 4.0rem 6.4rem;
       display: flex;
@@ -67,6 +73,25 @@ export const Main = styled.main`
       padding-bottom: 1.6rem;
       border-bottom: 1px solid var(--color-line-in-white);
     }
+
+    & legend button {
+      background: none;
+      border: 0;
+      outline: 0;
+      color: var(--color-primary);
+      font: 700 1.6rem Archivo;
+      cursor: pointer;
+      transition: color .2s;
+
+      &:hover {
+        color: var(--color-primary-dark);
+      }
+    }
+
+    & .input-block + .textarea-block,
+    & .select-block + .input-block {
+      margin-top: 2.4rem;
+    }
   }
 
   label {
@@ -113,5 +138,8 @@ export const Main = styled.main`
       }
     }
   }
+`;
+
+export const ScheduleItem = styled.div`
 
 `;
