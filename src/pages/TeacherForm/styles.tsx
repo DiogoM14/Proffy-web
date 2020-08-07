@@ -3,6 +3,34 @@ import styled from 'styled-components';
 export const Container = styled.div``;
 
 export const PageTeacherForm = styled.div`
+  @media (min-width: 700px) {
+    max-width: 100vw;
+
+    header .header-content {
+      margin-bottom: 0;
+    }
+
+    main fieldset {
+      padding: 0 6.4rem;
+    }
+
+    main footer {
+      padding: 4.0rem 6.4rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+
+      & p {
+        justify-content: space-between;
+      }
+
+      & button {
+        width: 20rem;
+        margin-top: 0;
+      }
+    }
+  }
+
   width: 100vw;
   height: 100vh;
 
@@ -39,6 +67,10 @@ export const Main = styled.main`
       padding-bottom: 1.6rem;
       border-bottom: 1px solid var(--color-line-in-white);
     }
+  }
+
+  label {
+    color: var(--color-text-complement);
   }
 
   footer {
