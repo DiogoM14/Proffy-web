@@ -1,13 +1,12 @@
 import React, { useState, FormEvent } from 'react';
 
-import TeacherItem from '../../components/TeacherItem';
+import TeacherItem, { Teacher } from '../../components/TeacherItem';
 import PageHeader from '../../components/PageHeader';
 import Input from '../../components/Input';
 import Select from '../../components/Select';
 
 import { Container, Form, Main } from './styles';
 import api from '../../services/api';
-
 
 const TeacherList: React.FC = () => {
   const [teachers, setTeachers] = useState([]);
@@ -80,9 +79,9 @@ const TeacherList: React.FC = () => {
         </PageHeader>
 
         <Main>
-          <TeacherItem />
-          <TeacherItem />
-          <TeacherItem />
+          {teachers.map((teacher: Teacher) => {
+            return <TeacherItem key={teacher.id} teacher={teacher}/>
+          })}
         </Main>
     </Container>
   );
