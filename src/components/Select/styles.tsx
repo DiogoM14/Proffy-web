@@ -1,11 +1,13 @@
 import styled from 'styled-components';
 
 export const Container = styled.div`
+  margin: 0 !important;
+
   .select-block {
     position: relative;
     flex-direction: column;
     padding: 0;
-
+    margin: 0;
   }
 
   .select-block + .select-block {
