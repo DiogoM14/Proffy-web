@@ -90,7 +90,7 @@ export const Footer = styled.footer`
     display: block;
   }
 
-  button {
+  a {
     width: 20rem;
     height: 5.6rem;
     background: var(--color-secondary);
@@ -103,6 +103,7 @@ export const Footer = styled.footer`
     align-items: center;
     justify-content: space-evenly;
     transition: 0.2s;
+    text-decoration: none;
 
     &:hover {
       background: var(--color-secondary-dark);
