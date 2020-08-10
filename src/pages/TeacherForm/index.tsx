@@ -1,5 +1,7 @@
 import React, { useState, FormEvent } from 'react';
+import { useHistory } from 'react-router-dom';
 
+import api from '../../services/api';
 import PageHeader from '../../components/PageHeader';
 import Input from '../../components/Input';
 import Textarea from '../../components/Textarea';
@@ -10,6 +12,8 @@ import warningIcon from '../../assets/images/icons/warning.svg';
 import { Container, PageTeacherForm, Main, ScheduleItem } from './styles';
 
 const TeacherForm: React.FC = () => {
+  const history = useHistory();
+
   const [name, setName] = useState('');
   const [avatar, setAvatar] = useState('');
   const [whatsapp, setWhatsapp] = useState('');
@@ -44,16 +48,21 @@ const TeacherForm: React.FC = () => {
   function handleCreateClass(e: FormEvent) {
     e.preventDefault();
 
-    console.log(
+    api.post('classes', {
       name,
       avatar,
       whatsapp,
       bio,
       subject,
-      cost,
-      scheduleItems
-    );
+      cost: Number(cost),
+      schedule: scheduleItems
+    }).then(() => {
+      alert('Registo realizado com sucesso!')
 
+      history.push('/')
+    }).catch(() => {
+      alert('Erro no registo!')
+    })
   }
 
   return (
